@@ -19,7 +19,7 @@ import _ from 'lodash'
           {pages.map(page=> (
             <li key={page}
              className={ page === currentPage ? 'page-item active' : 'page-item'}>
-                <a className="page-link"   onClick={()=> props.onPageChange(page)}>
+                <a  href="l" className="page-link"   onClick={()=> props.onPageChange(page)}>
                   {page}
                 </a>
             </li>
