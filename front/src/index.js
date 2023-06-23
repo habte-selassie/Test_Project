@@ -17,8 +17,8 @@ root.render(
   <React.StrictMode>
   {/* <Navigation/> */}
   {/* <About/> */}
-  {/* <Body/> */}
-  <Stories/>
+  <Body/>
+  {/* <Stories/> */}
   {/* <Footer/> */}
   {/* <PrivacyPolicy /> */}
 </React.StrictMode>
