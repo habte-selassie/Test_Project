@@ -5,23 +5,33 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import AddIcon from "@mui/icons-material/AddCircleRounded";
+import image1 from '../web-components/assets/foc.png'
+import image2 from '../web-components/assets/loan.png'
+import image3 from '../web-components/assets/afr.jpg'
+import image4 from '../web-components/assets/cr7.png'
+import image5 from '../web-components/assets/drogba.jpeg'
+import image6 from '../web-components/assets/sales.jpeg'
+import image from '../web-components/assets/afr.jpg'
 
 export default function Stories() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
+
+    <h2 style={{position:'absolute',marginLeft:'-690px',marginTop:'60px'}}>LATEST STORIES AND 
+UPDATES</h2>
       <Card
         sx={{
           maxWidth: 390,
           marginLeft: "10px",
-          height: "350px",
-          marginTop: "200px",
+          height: "420px",
+          marginTop: "119px",
         }}
       >
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image="../"
+            height="240"
+            image={image1}
             alt="green iguana"
           />
           <CardContent>
@@ -36,7 +46,7 @@ export default function Stories() {
         </CardActionArea>
         <CardActions>
           <Button
-            sx={{ marginTop: "210px", marginLeft: "-10px" }}
+            sx={{ marginTop: "300px", marginLeft: "-28px" }}
             size="small"
             color="primary"
           >
@@ -49,15 +59,15 @@ export default function Stories() {
         sx={{
           maxWidth: 390,
           marginLeft: "10px",
-          height: "350px",
-          marginTop: "200px",
+          height: "420px",
+          marginTop: "119px",
         }}
       >
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
+            height="240"
+            image={image2}
             alt="green iguana"
           />
           <CardContent>
@@ -72,7 +82,7 @@ export default function Stories() {
         </CardActionArea>
         <CardActions>
           <Button
-            sx={{ marginTop: "210px", marginLeft: "-10px" }}
+          sx={{ marginTop: "300px", marginLeft: "-28px" }}
             size="small"
             color="primary"
           >
@@ -85,15 +95,15 @@ export default function Stories() {
         sx={{
           maxWidth: 390,
           marginLeft: "10px",
-          height: "350px",
-          marginTop: "200px",
+          height: "420px",
+          marginTop: "119px",
         }}
       >
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
+            height="240"
+            image={image3}
             alt="green iguana"
           />
           <CardContent>
@@ -108,7 +118,7 @@ export default function Stories() {
         </CardActionArea>
         <CardActions>
           <Button
-            sx={{ marginTop: "210px", marginLeft: "-10px" }}
+            sx={{ marginTop: "300px", marginLeft: "-28px" }}
             size="small"
             color="primary"
           >
@@ -121,9 +131,9 @@ export default function Stories() {
         style={{
           width: "150px",
           height: "60px",
-          backgroundColor: "green",
+          backgroundColor:'yellowgreen',
           borderRadius: "15px",
-          marginTop: "530px",
+          marginTop: "550px",
           position: "fixed",
           marginLeft: "30px",
         }}
