@@ -9,6 +9,7 @@ import About from "./web-components/About";
 import Body from "./web-components/Body";
 import Stories from "./web-components/Stories";
 import Footer from "./web-components/Footer";
+import PrivacyPolicy from "./web-components/Privacy-Policy";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +19,8 @@ root.render(
   {/* <About/> */}
   {/* <Body/> */}
   {/* <Stories/> */}
-  <Footer/>
+  {/* <Footer/> */}
+  <PrivacyPolicy />
 </React.StrictMode>
 );
 
