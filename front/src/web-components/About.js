@@ -39,8 +39,8 @@ const About = () => {
       );
     return ( 
         <>
-   <Box sx={{ minWidth: 275 }}>
-        <Card variant="outlined">{card}</Card>
+   <Box sx={{ minWidth: 275,color:'white' ,marginLeft:'300px',width:'600px',height:'300px'}}>
+        <Card sx={{color:'red' ,backgroundColor:'white'}} variant="outlined">{card}</Card>
       </Box>
 
       <Card sx={{ minWidth: 275 }}>
@@ -65,7 +65,7 @@ const About = () => {
       </CardActions>
     </Card>
 
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 275,color:'red' ,backgroundColor:'black'}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
