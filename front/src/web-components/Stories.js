@@ -6,16 +6,22 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import AddIcon from '@mui/icons-material/AddCircleRounded';
 
+/* Rectangle 8 */
+
+
+
+background: url(focused-coworkers-checking-reports.jpg);
+border-radius: 8px 8px 0px 0px;
 
 export default function Stories() {
   return (
     <div style={{display:'flex',justifyContent:'center'}}>
-<Card sx={{ maxWidth: 345,marginLeft:'10px'}}>
+<Card sx={{ maxWidth: 390,marginLeft:'10px',height:'350px',marginTop:'200px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="https://www.figma.com/file/UkT02TmzMu5xq4vZcUZjou/DEMO-HOME-PAGE-02?type=design&node-id=1-123&mode=design&t=QcJ5z5kAbAFD1uPV-4"
           alt="green iguana"
         />
         <CardContent>
@@ -29,13 +35,13 @@ export default function Stories() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button  sx={{marginTop:'210px',marginLeft:'-10px'}} size="small" color="primary">
          <AddIcon style={{ fontSize: '2.6rem' }}/>
         </Button>
       </CardActions>
     </Card>
 
-    <Card sx={{ maxWidth: 345,marginLeft:'10px',  }}>
+    <Card  sx={{maxWidth: 390,marginLeft:'10px',height:'350px',marginTop:'200px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -54,14 +60,14 @@ export default function Stories() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button sx={{marginTop:'210px',marginLeft:'-10px'}} size="small" color="primary">
          <AddIcon style={{ fontSize: '2.6rem' }} />
         </Button>
       </CardActions>
     </Card>
 
 
-    <Card sx={{ maxWidth: 345, marginLeft:'10px',  }}>
+    <Card sx={{maxWidth: 390,marginLeft:'10px',height:'350px',marginTop:'200px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -80,7 +86,7 @@ export default function Stories() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button  sx={{marginTop:'210px',marginLeft:'-10px'}} size="small" color="primary">
          <AddIcon style={{ fontSize: '2.6rem' }}/>
         </Button>
       </CardActions>
@@ -88,7 +94,7 @@ export default function Stories() {
 
 
     <button
-        style={{ width: '150px', height: '60px', backgroundColor: 'green', borderRadius: '15px',marginTop:'350px', position:'fixed' ,marginLeft:'100px' }}
+        style={{ width: '150px', height: '60px', backgroundColor: 'green', borderRadius: '15px',marginTop:'530px', position:'fixed' ,marginLeft:'30px' }}
       >
         Lorem Ipsum
       </button>
