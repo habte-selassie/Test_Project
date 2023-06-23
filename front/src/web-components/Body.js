@@ -6,6 +6,7 @@ import Button from '@mui/material/Button'
 const Body = () => {
     return ( 
         <div style={{backgroundColor:'grey'}}>
+        <img src={require('.././web-components/assets/border.jpg')} alt=''/>
  <Box
       sx={{
         display: 'flex',      
@@ -39,6 +40,7 @@ const Body = () => {
     </div>
       
     </Box>
+    <img src={require('.././web-components/assets/border.jpg')} alt=''/>
         </div>
      );
 }
