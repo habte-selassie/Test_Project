@@ -32,7 +32,7 @@ UPDATES</h2>
             component="img"
             height="240"
             image={image1}
-            alt="green iguana"
+            alt=""
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -68,7 +68,7 @@ UPDATES</h2>
             component="img"
             height="240"
             image={image2}
-            alt="green iguana"
+            alt=""
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -104,7 +104,7 @@ UPDATES</h2>
             component="img"
             height="240"
             image={image3}
-            alt="green iguana"
+            alt=""
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
