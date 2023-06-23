@@ -19,7 +19,7 @@ const Body = () => {
     >
     
     <div style={{marginLeft:'150px',width:'390px',height:'500px',marginTop:'200px',backgroundColor:'grey'}}>
-    <Paper variant="outlined" style={{marginLeft:'10px',width:'500px',height:'300px',border:'1px solid black',backgroundColor:'gray'}}>
+    <Paper variant="outlined" style={{marginLeft:'10px',width:'500px',height:'300px',border:'1px solid grey',backgroundColor:'gray'}}>
       <h3> Lorem ipsum dolor sit consectetur.</h3>
 
       <p style={{marginTop:'30px'}}>Mauris suscipit faucibus felis risus lectus platea neque ut.
@@ -29,7 +29,7 @@ const Body = () => {
     </div>
      
     <div style={{marginLeft:'100px',width:'390px',height:'500px',marginTop:'200px',backgroundColor:'grey'}}>
-    <Paper variant="outlined" style={{marginLeft:'60px',width:'500px',height:'300px',border:'1px solid black',backgroundColor:'gray'}}>
+    <Paper variant="outlined" style={{marginLeft:'60px',width:'500px',height:'300px',border:'1px solid grey',backgroundColor:'gray'}}>
       <h3> Lorem ipsum dolor sit consectetur.</h3>
 
       <p style={{marginTop:'30px'}}>Mauris suscipit faucibus felis risus lectus platea neque ut.
