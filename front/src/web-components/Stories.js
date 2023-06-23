@@ -88,7 +88,7 @@ export default function Stories() {
 
 
     <button
-        style={{ width: '150px', height: '60px', backgroundColor: 'green', borderRadius: '15px',marginTop:'100px' }}
+        style={{ width: '150px', height: '60px', backgroundColor: 'green', borderRadius: '15px',marginTop:'350px', position:'fixed' ,marginLeft:'100px' }}
       >
         Lorem Ipsum
       </button>
