@@ -5,12 +5,14 @@ import App from './App';
 import "bootstrap/dist/css/bootstrap.css"
 import "font-awesome/css/font-awesome.css"
 import Navigation from "./web-components/Navigation";
+import About from "./web-components/About";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Navigation/>
+  {/* <Navigation/> */}
+  <About/>
 </React.StrictMode>
 );
 
