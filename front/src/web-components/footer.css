@@ -1,0 +1,40 @@
+
+input {
+    width: 360px;
+    height: 60px;
+    margin-left: 80px;
+    border-radius: 39px;
+}
+button {
+    width: 128px;
+    height: 60px;
+    margin-left: 150px;
+    border-radius: 39px;
+    margin-top: 40px;
+    color: rgb(44, 83, 192);
+    background-color: greenyellow;
+}
+.input-with-button {
+    position: relative;
+    display: inline-block;
+    margin-top: 360px;
+   
+  }
+
+  .input-with-button input[type="text"] {
+    padding-right: 40px; /* Adjust this value based on the button size */
+  }
+
+  .input-with-button button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  li{
+    color: #3f3dc7;
+  }
+
+  ul{
+    list-style-type: none;
+  }

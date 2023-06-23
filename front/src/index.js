@@ -8,6 +8,7 @@ import Navigation from "./web-components/Navigation";
 import About from "./web-components/About";
 import Body from "./web-components/Body";
 import Stories from "./web-components/Stories";
+import Footer from "./web-components/Footer";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +17,8 @@ root.render(
   {/* <Navigation/> */}
   {/* <About/> */}
   {/* <Body/> */}
-  <Stories/>
+  {/* <Stories/> */}
+  <Footer/>
 </React.StrictMode>
 );
 
