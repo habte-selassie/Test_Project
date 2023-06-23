@@ -4,14 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import "bootstrap/dist/css/bootstrap.css"
 import "font-awesome/css/font-awesome.css"
+import Navigation from "./web-components/Navigation";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
-   <App />
-  </BrowserRouter>
+  <Navigation/>
 </React.StrictMode>
 );
 

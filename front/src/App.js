@@ -238,78 +238,78 @@
 // }
  
 // export default withRouter(App)
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { Switch } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { useRouteMatch } from "react-router-dom";
+// import React from "react";
+// import { BrowserRouter } from "react-router-dom";
+// import { Route } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { Switch } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+// import { useRouteMatch } from "react-router-dom";
 
-const Reports = () => {
-  let {path,url} = useRouteMatch()
-  return ( 
-    <div>
-      <h2>Reports</h2>
-      <ul>
-        <li>
-          <Link to={`${url}/profitloss`}>Profit and loss</Link>
-        </li>
-        <li>
-          <Link to={`${url}/balancesheet`}>Balance sheet</Link>
-        </li>
-        <li>
-          <Link to={`${url}/payroll`}>Payroll</Link>
-        </li>
-      </ul>
+// const Reports = () => {
+//   let {path,url} = useRouteMatch()
+//   return ( 
+//     <div>
+//       <h2>Reports</h2>
+//       <ul>
+//         <li>
+//           <Link to={`${url}/profitloss`}>Profit and loss</Link>
+//         </li>
+//         <li>
+//           <Link to={`${url}/balancesheet`}>Balance sheet</Link>
+//         </li>
+//         <li>
+//           <Link to={`${url}/payroll`}>Payroll</Link>
+//         </li>
+//       </ul>
 
-      <Switch>
-        <Route exact path={path}>
-          <h3>Select a report</h3>
-        </Route>
-        <Route path={`${path}/:reportId`}>
-          <Report />
-        </Route>
-      </Switch>
-    </div>
-   );
-}
+//       <Switch>
+//         <Route exact path={path}>
+//           <h3>Select a report</h3>
+//         </Route>
+//         <Route path={`${path}/:reportId`}>
+//           <Report />
+//         </Route>
+//       </Switch>
+//     </div>
+//    );
+// }
 
-function Report() {
-  let { reportId } = useParams();
-  return (
-  <div>
-  <h3>{reportId}</h3>
-  </div>
-  );
-  }
+// function Report() {
+//   let { reportId } = useParams();
+//   return (
+//   <div>
+//   <h3>{reportId}</h3>
+//   </div>
+//   );
+//   }
  
 
 
-  function Nav() {
-    return(
-    <div>
-    <ul>
-    <li>
-    <Link to={`/reports`}>Reports</Link>
-    </li>
-    </ul>
-    <hr />
-    <Switch>
-    <Route path={`/reports`}>
-    <Reports />
-    </Route>
-    </Switch>
-    </div>
-  )
-}
+//   function Nav() {
+//     return(
+//     <div>
+//     <ul>
+//     <li>
+//     <Link to={`/reports`}>Reports</Link>
+//     </li>
+//     </ul>
+//     <hr />
+//     <Switch>
+//     <Route path={`/reports`}>
+//     <Reports />
+//     </Route>
+//     </Switch>
+//     </div>
+//   )
+// }
 
-function App() {
-  return (
-  <BrowserRouter>
-  <Nav />
-  </BrowserRouter>
-  );
-  }
-  export default App;
+// function App() {
+//   return (
+//   <BrowserRouter>
+//   <Nav />
+//   </BrowserRouter>
+//   );
+//   }
+//   export default App;
 
