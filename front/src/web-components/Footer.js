@@ -1,4 +1,7 @@
 import './footer.css'
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 const Footer = () => {
     return ( 
 <div>
@@ -10,31 +13,32 @@ const Footer = () => {
 
           
 <div style={{ display: 'flex', justifyContent: 'center',marginTop:'-135px' }}>
-<ul style={{marginLeft:'300px',}}>
-            <h3>Reach Us</h3>
-            <li>Home</li>
-            <li>Gallery</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Blog</li>
+<ul style={{marginLeft:'300px',display:'flex',flexDirection:'column'}}>
+            <h3 style={{marginLeft:'-1px'}}>Reach Us</h3>
+            
+            <Link href='/gallery' underline="none">Home</Link>
+            <Link href='/gallery' underline="none">Gallery</Link>
+            <Link href='/gallery' underline="none">About Us</Link>
+            <Link href='/gallery' underline="none">Contact Us</Link>
+            <Link href='/gallery' underline="none">Blog</Link>
 
 
             </ul>
 
-            <ul  style={{marginLeft:'100px'}}>
-            <h3>Be Social</h3>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Linkedin</li>
-            <li>Youtube Channel</li>
+            <ul style={{marginLeft:'100px',display:'flex',flexDirection:'column'}}>
+            <h3 style={{marginLeft:'-1px'}}>Be Social</h3>
+            <Link  href='https://www.facebook.com' underline="none">Facebook</Link>
+            <Link  href='https://www.twitter.com' underline="none">Twitter</Link>
+            <Link  href='https://www.linkedin.com' underline="none">Linkedin</Link>
+            <Link  href='https://www.youtube.com' underline="none">Youtube Channel</Link>
             {/* <li>Blog</li> */}
             </ul>
 
-            <ul  style={{marginLeft:'100px'}}>
-            <h3>Quick Links </h3>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
+            <ul style={{marginLeft:'100px',display:'flex',flexDirection:'column'}}>
+            <h3 style={{marginLeft:'-5px'}}>Quick Links </h3>
+            <Link  href='/gallery'underline="none">Link 1</Link>
+            <Link  href='/gallery'underline="none">Link 2</Link>
+            <Link  href='/gallery'underline="none">Link 3</Link>
             </ul>
 </div>
 
