@@ -7,6 +7,7 @@ import "font-awesome/css/font-awesome.css"
 import Navigation from "./web-components/Navigation";
 import About from "./web-components/About";
 import Body from "./web-components/Body";
+import Stories from "./web-components/Stories";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
   <React.StrictMode>
   {/* <Navigation/> */}
   {/* <About/> */}
-  <Body/>
+  {/* <Body/> */}
+  <Stories/>
 </React.StrictMode>
 );
 
