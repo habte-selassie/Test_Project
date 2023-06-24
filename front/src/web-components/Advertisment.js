@@ -1,16 +1,11 @@
 import  React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import {CardActionArea} from "@mui/material";
-import image4 from '../web-components/assets/cr7.png'
+import image4 from '../web-components/assets/kfc.jpeg'
 import image5 from '../web-components/assets/drogba.jpeg'
-import image6 from '../web-components/assets/sales.jpeg'
+import image6 from '../web-components/assets/pepsi.jpg'
 
-import AddIcon from "@mui/icons-material/AddCircleRounded";
+
 
 const Advertisment = () => {
     return ( 

@@ -14,14 +14,14 @@ export default function Stories() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
 
-    <h2 style={{position:'absolute',marginLeft:'-690px',marginTop:'60px'}}>LATEST STORIES AND 
+    <h2 style={{position:'absolute',marginLeft:'-690px',marginTop:'165px'}}>LATEST STORIES AND 
 UPDATES</h2>
       <Card
         sx={{
           maxWidth: 390,
           marginLeft: "10px",
           height: "420px",
-          marginTop: "119px",
+          marginTop: "249px",
         }}
       >
         <CardActionArea>
@@ -57,7 +57,7 @@ UPDATES</h2>
           maxWidth: 390,
           marginLeft: "10px",
           height: "420px",
-          marginTop: "119px",
+          marginTop: "249px",
         }}
       >
         <CardActionArea>
@@ -93,7 +93,7 @@ UPDATES</h2>
           maxWidth: 390,
           marginLeft: "10px",
           height: "420px",
-          marginTop: "119px",
+          marginTop: "249px",
         }}
       >
         <CardActionArea>

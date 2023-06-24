@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 const Footer = () => {
     return ( 
-<div>
+<div style={{marginTop:'-120px'}}>
 <div class="input-with-button">
 <p style={{marginLeft:'100px'}}>Subscribe to our weekly news letter</p>
   <input type="text" placeholder="Enter your name" />

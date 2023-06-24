@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 
 const Body = () => {
     return ( 
-        <div style={{backgroundColor:'grey',height:'600px'}}>
+        <div style={{backgroundColor:'grey',height:'600px',marginTop:'30px'}}>
         <img  style={{width:'100%',height:'210px',marginTop:'-60px'}} src={require('.././web-components/assets/border-1.png')} alt=''/>
  <Box
       sx={{
