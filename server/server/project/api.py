@@ -8,6 +8,7 @@ def get_mission(request):
         'description': mission.description
     }
     return JsonResponse(data)
+
 def get_vision(request):
     vision = Vision.objects.first()
     data = {
