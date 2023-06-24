@@ -9,19 +9,18 @@ import About from "./web-components/About";
 import Body from "./web-components/Body";
 import Stories from "./web-components/Stories";
 import Footer from "./web-components/Footer";
-import PrivacyPolicy from "./web-components/Privacy-Policy";
 import Advertisment from "./web-components/Advertisment";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<Navigation/> 
-  {/* <About/>
-  <Advertisment/>
-  <Body/> 
- <Stories/>  
- <Footer/>  */}
+   <Navigation/> 
+   <About/>
+   <Advertisment/>
+   <Body/> 
+  <Stories/>  
+  <Footer/>  
 </React.StrictMode>
 );
 
