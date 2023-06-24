@@ -20,29 +20,7 @@ const About = () => {
           •
         </Box>
       );
-    const card = (
-        <React.Fragment>
-          <CardContent>
-            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </React.Fragment>
-      );
+   
 
       const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -72,21 +50,23 @@ Vestibulum et lobortis elit, sed bibendum turpis. Morbi pellentesque est quis du
 
 
 
-<Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3 }}>
+<Box sx={{ flexGrow: 1, overflow: 'hidden', px: 3,marginTop:'-100px' }}>
       <StyledPaper
         sx={{
           my: 1,
           mx: 'auto',
           p: 2,
-          height:'350px',
+          height:'460px',
           marginTop:'30px'
         }}
       >
         <Grid container wrap="nowrap" spacing={2}>
-
+ 
       
          
          <Grid item xs>
+         <img  style={{width:'900px',height:'210px',marginTop:'-80px',marginLeft:'-65px'}} src={require('.././web-components/assets/border-1.png')} alt=''/>
+
          <Typography variant="h5"
          component="div"
          sx={{
@@ -95,6 +75,8 @@ Vestibulum et lobortis elit, sed bibendum turpis. Morbi pellentesque est quis du
         textDecorationStyle: 'solid',
         fontWeight: 'bold',
         color: 'yellowgreen',
+        marginTop:'-40px'
+        
       }}>
         About Lorem Ipsum
         </Typography>       
