@@ -16,11 +16,11 @@ const Footer = () => {
 <ul style={{marginLeft:'300px',display:'flex',flexDirection:'column'}}>
             <h3 style={{marginLeft:'-1px'}}>Reach Us</h3>
             
-            <Link href='/gallery' underline="none">Home</Link>
+            <Link href='/Home' underline="none">Home</Link>
             <Link href='/gallery' underline="none">Gallery</Link>
-            <Link href='/gallery' underline="none">About Us</Link>
-            <Link href='/gallery' underline="none">Contact Us</Link>
-            <Link href='/gallery' underline="none">Blog</Link>
+            <Link href='/About' underline="none">About Us</Link>
+            <Link href='/Contact' underline="none">Contact Us</Link>
+            <Link href='/Blog' underline="none">Blog</Link>
 
 
             </ul>

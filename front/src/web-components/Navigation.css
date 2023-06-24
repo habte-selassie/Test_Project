@@ -1,0 +1,10 @@
+.icon-container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .hoverable-icon:hover {
+    color: red;
+    /* Add any other hover styles as desired */
+  }
+  
