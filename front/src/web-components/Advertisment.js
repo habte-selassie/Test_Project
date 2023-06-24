@@ -5,37 +5,35 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {CardActionArea} from "@mui/material";
+import image4 from '../web-components/assets/cr7.png'
+import image5 from '../web-components/assets/drogba.jpeg'
+import image6 from '../web-components/assets/sales.jpeg'
+
+import AddIcon from "@mui/icons-material/AddCircleRounded";
+
 const Advertisment = () => {
     return ( 
-        <div>
-            <h1>
-            Tellus erat aliquam blandit etiam
-            </h1>
-
-<div style={{display:'flex',justifyContent:'center'}}>
-
-<Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+    <h2 style={{position:'absolute',marginLeft:'-690px',marginTop:'60px'}}>Tellus erat aliquam blandit etiam</h2>
+      <Card sx={{ maxWidth: 390,marginLeft: "10px",
+          height: "420px",
+          marginTop: "119px", }}>
+      <CardMedia component="img" height="100%" image={image4} alt="" />
     </Card>
-</div>
-        </div>
+
+    <Card sx={{ maxWidth: 390,marginLeft: "10px",
+          height: "420px",
+          marginTop: "119px", }}>
+      <CardMedia component="img" height="100%" image={image5} alt="" />
+    </Card>
+
+    <Card sx={{ maxWidth: 390,marginLeft: "10px",
+          height: "420px",
+          marginTop: "119px", }}>
+      <CardMedia component="img" height="100%" image={image6} alt="" />
+    </Card>
+    </div>
      );
 }
  

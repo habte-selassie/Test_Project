@@ -8,10 +8,7 @@ import AddIcon from "@mui/icons-material/AddCircleRounded";
 import image1 from '../web-components/assets/foc.png'
 import image2 from '../web-components/assets/loan.png'
 import image3 from '../web-components/assets/afr.jpg'
-import image4 from '../web-components/assets/cr7.png'
-import image5 from '../web-components/assets/drogba.jpeg'
-import image6 from '../web-components/assets/sales.jpeg'
-import image from '../web-components/assets/afr.jpg'
+
 
 export default function Stories() {
   return (
