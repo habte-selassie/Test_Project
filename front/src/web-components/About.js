@@ -1,17 +1,55 @@
-import * as React from 'react';
+import  React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Avatar from '@mui/material/Avatar';
+import { useState } from 'react'
+import { useEffect } from 'react'
+import axios from 'axios'
+
+
+
 
 
 const About = () => {
+      
+     const [mission,setMission] = useState('')
+     const [vision ,setVision] = useState('')
+     const [objectives,setObjectives] = useState([])
+
+
+     useEffect(()=>{
+      ////////////// fetch mission data
+
+      axios.get('http://localhost:8000/api/mission/')
+      .then(response=>{
+        setMission(response.data.title)
+      })
+      .catch(error=>{
+        console.error('Error fetching mission data',error)
+      })
+
+      // Fetch vision data
+    axios.get('http://localhost:8000/api/vision/')
+    .then(response => {
+      setVision(response.data.title);
+    })
+    .catch(error => {
+      console.error('Error fetching vision data:', error);
+    });
+
+    axios.get('http://localhost:8000/api/objectives/')
+    .then(response => {
+      setObjectives(response.data);
+    })
+    .catch(error => {
+      co
+
+     })
+
     const bull = (
         <Box
           component="span"
@@ -89,39 +127,7 @@ Vestibulum et lobortis elit, sed bibendum turpis. Morbi pellentesque est quis du
          </Grid>
        </Grid>
 
-       {/* <Box
-      sx={{
-        width: 300,
-        height: 300,
-        backgroundColor: 'primary.dark',
-        '&:hover': {
-          backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
-      }}
-    >{message}</Box> */}
-
-{/* <Box
-      sx={{
-        width: 300,
-        height: 300,
-        backgroundColor: 'primary.dark',
-        '&:hover': {
-          backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
-      }}
-    >
-
-Blockchain for business uses a shared and immutable ledger that can only be accessed by members with permission. Network members control what information each organization or member may see, and what actions each can take. Blockchain is sometimes called a “trustless” network — not because business partners don’t trust each other, but because they don’t have to.
-
-This trust is built on blockchain’s enhanced security, greater transparency, and instant traceability. Beyond matters of trust, blockchain delivers even more business benefits, including the cost savings from increased speed, efficiency, and automation. By greatly reducing paperwork and errors, blockchain significantly reduces overhead and transaction costs, and reduces or eliminates the need for third parties or middlemen to verify transactions.
-</Box> */}
-
-        {/* <Box sx={{ minWidth: 275,color:'black' ,marginLeft:'300px',width:'900px',height:'500px'}}>
-        <Card sx={{color:'red', marginTop:'150px',backgroundColor:'white',marginLeft:'-300px',width:'500px',height:'300px'}}
-         variant="outlined">{card}</Card>
-         </Box> */}
+    
         
       </StyledPaper>
      
