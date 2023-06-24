@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+ 
+from django.urls import path 
+from . import api 
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/mission/',api.get_mission,name='get_mission'),
+    path('api/vision/',api.get_vision,name='get_mission'),
+    path('api/objectives/',api.get_objectives,name='get_objectives')
+
 ]
