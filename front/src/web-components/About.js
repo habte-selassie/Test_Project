@@ -12,13 +12,13 @@ import axios from 'axios';
 const About = () => {
   const [mission, setMission] = useState('');
   const [vision, setVision] = useState('');
-  const [objectives, setObjectives] = useState([]);
+  const [objective, setObjective] = useState('');
   const [editMission, setEditMission] = useState(false);
   const [editVision, setEditVision] = useState(false);
-  const [editObjectives, setEditObjectives] = useState(false);
-  const [missionText, setMissionText] = useState('');
-  const [visionText, setVisionText] = useState('');
-  const [objectiveText, setObjectiveText] = useState('');
+  const [editObjective, setEditObjective] = useState(false);
+  const [missionText, setMissionText] = useState(' Hello My Name Is Habte Selassie Fitsum');
+  const [visionText, setVisionText] = useState('Hello My Name Is Habte Selassie Fitsum');
+  const [objectiveText, setObjectiveText] = useState('Hello My Name Is Habte Selassie Fitsum');
 
   useEffect(() => {
     // Fetch mission data
@@ -45,7 +45,7 @@ const About = () => {
     axios
       .get('http://localhost:8000/api/objectives/')
       .then(response => {
-        setObjectives(response.data);
+        setObjective(response.data);
       })
       .catch(error => {
         console.error('Error fetching objectives data:', error);
@@ -61,6 +61,7 @@ const About = () => {
   }));
 
   const handleMissionSave = () => {
+    // Make an API call to save the mission
     axios
       .post('http://localhost:8000/api/mission/update/', {
         mission_id: mission.id,
@@ -69,14 +70,19 @@ const About = () => {
       })
       .then(response => {
         setMission(response.data.title);
-        setEditMission(false);
+        // setEditMission(false);
       })
       .catch(error => {
         console.error('Error updating mission data:', error);
       });
+      //setMission(response.data.title);
+      // setEditMission(false);
+      // setMissionText(e.target.value);
+      setEditMission(false);
   };
   
   const handleMissionDelete = () => {
+    // Make an API call to delete the mission
     axios
       .post('http://localhost:8000/api/mission/delete/', {
         mission_id: mission.id
@@ -88,93 +94,122 @@ const About = () => {
       .catch(error => {
         console.error('Error deleting mission data:', error);
       });
+      setMissionText('')
+
+      // setEditMission(false);
   };
   
   const handleMissionEdit = () => {
     setEditMission(true);
   };
+  
 
-  const handleVisionEdit = () => {
-    setEditVision(true);
-  };
+const handleMissionCancel = () =>{
+  setEditMission(false);
+  setMissionText('')
+}
 
-  const handleObjectivesEdit = () => {
-    setEditObjectives(true);
-  };
+const handleVisionSave = () => {
+  // Make an API call to save the vision
+  axios
+    .post('http://localhost:8000/api/vision/update/', {
+      vision_id: vision.id,
+      title: visionText,
+      description: vision.description
+    })
+    .then(response => {
+      setVision(response.data.title);
+      setEditVision(false);
+    })
+    .catch(error => {
+      console.error('Error updating vision data:', error);
+    });
+};
 
-  //const handleMissionSave = () => {
+const handleVisionDelete = () => {
+  // Make an API call to delete the vision
+  axios
+    .post('http://localhost:8000/api/vision/delete/', {
+      vision_id: vision.id
+    })
+    .then(() => {
+      setVision('');
+      setEditVision(false);
+    })
+    .catch(error => {
+      console.error('Error deleting vision data:', error);
+    });
+  setVisionText('');
+};
+
+const handleVisionEdit = () => {
+  setEditVision(true);
+};
+
+const handleVisionCancel = () => {
+  setEditVision(false);
+  setVisionText('');
+};
+
+const handleObjectiveSave = () => {
+  // Make an API call to save the objective
+  axios
+    .post('http://localhost:8000/api/objective/update/', {
+      objective_id: objective.id,
+      title: objectiveText,
+      description: objective.description
+    })
+    .then(response => {
+      setObjective(response.data.title);
+      setEditObjective(false);
+    })
+    .catch(error => {
+      console.error('Error updating objective data:', error);
+    });
+};
+
+const handleObjectiveDelete = () => {
+  // Make an API call to delete the objective
+  axios
+    .post('http://localhost:8000/api/objective/delete/', {
+      objective_id: objective.id
+    })
+    .then(() => {
+      setObjective('');
+      setEditObjective(false);
+    })
+    .catch(error => {
+      console.error('Error deleting objective data:', error);
+    });
+  setObjectiveText('');
+};
+
+const handleObjectiveEdit = () => {
+  setEditObjective(true);
+};
+
+const handleObjectiveCancel = () => {
+  setEditObjective(false);
+  setObjectiveText('');
+};
+
+
+  
+
+  // const handleObjectivesSave = () => {
+  //   // Assuming objectives are saved individually
   //   axios
-  //     .put('http://localhost:8000/api/mission/', { title: missionText })
+  //     .put('http://localhost:8000/api/objectives/', { title: objectiveText })
   //     .then(response => {
-  //       setMission(response.data.title);
-  //       setEditMission(false);
+  //       setObjective([...objective, response.data]);
+  //       setEditObjective(false);
   //     })
   //     .catch(error => {
-  //       console.error('Error updating mission data:', error);
+  //       console.error('Error updating objectives data:', error);
   //     });
   // };
 
-  const handleVisionSave = () => {
-    axios
-      .put('http://localhost:8000/api/vision/', { title: visionText })
-      .then(response => {
-        setVision(response.data.title);
-        setEditVision(false);
-      })
-      .catch(error => {
-        console.error('Error updating vision data:', error);
-      });
-  };
-
-  const handleObjectivesSave = () => {
-    // Assuming objectives are saved individually
-    axios
-      .put('http://localhost:8000/api/objectives/', { title: objectiveText })
-      .then(response => {
-        setObjectives([...objectives, response.data]);
-        setEditObjectives(false);
-      })
-      .catch(error => {
-        console.error('Error updating objectives data:', error);
-      });
-  };
-
-  // const handleMissionDelete = () => {
-  //   axios
-  //     .delete('http://localhost:8000/api/mission/')
-  //     .then(() => {
-  //       setMission('');
-  //       setEditMission(false);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error deleting mission data:', error);
-  //     });
-  // };
-
-  const handleVisionDelete = () => {
-    axios
-      .delete('http://localhost:8000/api/vision/')
-      .then(() => {
-        setVision('');
-        setEditVision(false);
-      })
-      .catch(error => {
-        console.error('Error deleting vision data:', error);
-      });
-  };
-
-  const handleObjectiveDelete = (objectiveId) => {
-    axios
-      .delete(`http://localhost:8000/api/objectives/${objectiveId}`)
-      .then(() => {
-        const updatedObjectives = objectives.filter(objective => objective.id !== objectiveId);
-        setObjectives(updatedObjectives);
-        setEditObjectives(false);
-      })
-      .catch(error => {
-        console.error('Error deleting objective data:', error);
-      });
-  };
+  
 
   return (
     <>
@@ -232,13 +267,20 @@ const About = () => {
             >
               Mission
             </Typography>
+
+            {missionText}
+                {/* Hello My Name Is Habte Selassie Fitsum */}
+            <Typography>
+
+            </Typography>
             {!editMission ? (
               <>
                 <Typography variant="body2">{mission}</Typography>
-                <Button variant="contained" onClick={handleMissionEdit} sx={{ marginTop: '10px', marginRight: '5px' }}>
+               
+                <Button variant="contained" onClick={handleMissionEdit} sx={{ marginTop: '10px', marginRight: '5px',width:'10px' }}>
                   Edit
                 </Button>
-                <Button variant="contained" onClick={handleMissionDelete} sx={{ marginTop: '10px' }}>
+                <Button variant="contained" onClick={handleMissionDelete} sx={{ marginTop: '10px',width:'10px' }}>
                   Delete
                 </Button>
               </>
@@ -253,10 +295,11 @@ const About = () => {
                   onChange={e => setMissionText(e.target.value)}
                   sx={{ marginBottom: '10px' }}
                 />
+                
                 <Button variant="contained" onClick={handleMissionSave} sx={{ marginRight: '10px' }}>
                   Save
                 </Button>
-                <Button variant="contained" onClick={() => setEditMission(false)}>
+                <Button variant="contained" onClick={handleMissionCancel}>
                   Cancel
                 </Button>
               </>
@@ -279,13 +322,16 @@ const About = () => {
             >
               Vision
             </Typography>
+            <Typography>
+              {visionText}
+            </Typography>
             {!editVision ? (
               <>
                 <Typography variant="body2">{vision}</Typography>
-                <Button variant="contained" onClick={handleVisionEdit} sx={{ marginTop: '10px', marginRight: '5px' }}>
+                <Button variant="contained" onClick={handleVisionEdit} sx={{ marginTop: '10px', marginRight: '5px',width:'10px' }}>
                   Edit
                 </Button>
-                <Button variant="contained" onClick={handleVisionDelete} sx={{ marginTop: '10px' }}>
+                <Button variant="contained" onClick={handleVisionDelete} sx={{ marginTop: '10px',width:'10px' }}>
                   Delete
                 </Button>
               </>
@@ -303,27 +349,13 @@ const About = () => {
                 <Button variant="contained" onClick={handleVisionSave} sx={{ marginRight: '10px' }}>
                   Save
                 </Button>
-                <Button variant="contained" onClick={() => setEditVision(false)}>
+                <Button variant="contained" onClick={handleVisionCancel}>
                   Cancel
                 </Button>
               </>
             )}
           </CardContent>
         </Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <Card sx={{ minWidth: 275, backgroundColor: 'white', marginTop: '20px', width: '300px', marginLeft: '50px' }}>
           <CardContent>
@@ -340,13 +372,19 @@ const About = () => {
             >
               Objectives
             </Typography>
-            {!editObjectives ? (
+
+            <Typography>
+              {objectiveText}
+            </Typography>
+
+            <Typography>{objective}</Typography>
+            {!editObjective ? (
               <>
-                <Typography variant="body2">{objectives}</Typography>
-                <Button variant="contained" onClick={handleObjectivesEdit} sx={{ marginTop: '10px', marginRight: '5px' }}>
+                <Typography variant="body2">{objective}</Typography>
+                <Button variant="contained" onClick={handleObjectiveEdit} sx={{ marginTop: '10px', marginRight: '5px',width:'10px' }}>
                   Edit
                 </Button>
-                <Button variant="contained" onClick={handleObjectiveDelete} sx={{ marginTop: '10px' }}>
+                <Button variant="contained" onClick={handleObjectiveDelete} sx={{ marginTop: '10px',width:'10px' }}>
                   Delete
                 </Button>
               </>
@@ -361,27 +399,16 @@ const About = () => {
                   onChange={e => setObjectiveText(e.target.value)}
                   sx={{ marginBottom: '10px' }}
                 />
-                <Button variant="contained" onClick={handleObjectivesSave} sx={{ marginRight: '10px' }}>
+                <Button variant="contained" onClick={handleObjectiveSave} sx={{ marginRight: '10px' }}>
                   Save
                 </Button>
-                <Button variant="contained" onClick={() => setEditObjectives(false)}>
+                <Button variant="contained" onClick={handleObjectiveCancel}>
                   Cancel
                 </Button>
               </>
             )}
           </CardContent>
         </Card>
-
-
-
-
-
-
-
-
-
-
-
 
       </div>
     </>
