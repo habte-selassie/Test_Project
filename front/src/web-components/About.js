@@ -124,6 +124,7 @@ const handleVisionSave = () => {
     .catch(error => {
       console.error('Error updating vision data:', error);
     });
+    setEditVision(false)
 };
 
 const handleVisionDelete = () => {
@@ -166,6 +167,7 @@ const handleObjectiveSave = () => {
     .catch(error => {
       console.error('Error updating objective data:', error);
     });
+    setEditObjective(false)
 };
 
 const handleObjectiveDelete = () => {
@@ -192,24 +194,6 @@ const handleObjectiveCancel = () => {
   setEditObjective(false);
   setObjectiveText('');
 };
-
-
-  
-
-  // const handleObjectivesSave = () => {
-  //   // Assuming objectives are saved individually
-  //   axios
-  //     .put('http://localhost:8000/api/objectives/', { title: objectiveText })
-  //     .then(response => {
-  //       setObjective([...objective, response.data]);
-  //       setEditObjective(false);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error updating objectives data:', error);
-  //     });
-  // };
-
-  
 
   return (
     <>
@@ -322,12 +306,16 @@ const handleObjectiveCancel = () => {
             >
               Vision
             </Typography>
+
+            {visionText}
+                {/* Hello My Name Is Habte Selassie Fitsum */}
             <Typography>
-              {visionText}
+
             </Typography>
             {!editVision ? (
               <>
                 <Typography variant="body2">{vision}</Typography>
+               
                 <Button variant="contained" onClick={handleVisionEdit} sx={{ marginTop: '10px', marginRight: '5px',width:'10px' }}>
                   Edit
                 </Button>
@@ -346,6 +334,7 @@ const handleObjectiveCancel = () => {
                   onChange={e => setVisionText(e.target.value)}
                   sx={{ marginBottom: '10px' }}
                 />
+                
                 <Button variant="contained" onClick={handleVisionSave} sx={{ marginRight: '10px' }}>
                   Save
                 </Button>
@@ -372,15 +361,14 @@ const handleObjectiveCancel = () => {
             >
               Objectives
             </Typography>
-
+            {objectiveText}
+                {/* Hello My Name Is Habte Selassie Fitsum */}
             <Typography>
-              {objectiveText}
             </Typography>
-
-            <Typography>{objective}</Typography>
             {!editObjective ? (
               <>
                 <Typography variant="body2">{objective}</Typography>
+               
                 <Button variant="contained" onClick={handleObjectiveEdit} sx={{ marginTop: '10px', marginRight: '5px',width:'10px' }}>
                   Edit
                 </Button>
@@ -391,14 +379,15 @@ const handleObjectiveCancel = () => {
             ) : (
               <>
                 <TextField
-                  label="Vision Text"
+                  label="Objective Text"
                   multiline
                   rows={4}
                   variant="outlined"
-                  value={visionText}
+                  value={objectiveText}
                   onChange={e => setObjectiveText(e.target.value)}
                   sx={{ marginBottom: '10px' }}
                 />
+                
                 <Button variant="contained" onClick={handleObjectiveSave} sx={{ marginRight: '10px' }}>
                   Save
                 </Button>
@@ -409,7 +398,6 @@ const handleObjectiveCancel = () => {
             )}
           </CardContent>
         </Card>
-
       </div>
     </>
   );
