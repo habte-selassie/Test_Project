@@ -60,6 +60,36 @@ const About = () => {
     color: theme.palette.text.primary,
   }));
 
+  const handleMissionSave = () => {
+    axios
+      .post('http://localhost:8000/api/mission/update/', {
+        mission_id: mission.id,
+        title: missionText,
+        description: mission.description
+      })
+      .then(response => {
+        setMission(response.data.title);
+        setEditMission(false);
+      })
+      .catch(error => {
+        console.error('Error updating mission data:', error);
+      });
+  };
+  
+  const handleMissionDelete = () => {
+    axios
+      .post('http://localhost:8000/api/mission/delete/', {
+        mission_id: mission.id
+      })
+      .then(() => {
+        setMission('');
+        setEditMission(false);
+      })
+      .catch(error => {
+        console.error('Error deleting mission data:', error);
+      });
+  };
+  
   const handleMissionEdit = () => {
     setEditMission(true);
   };
@@ -72,17 +102,17 @@ const About = () => {
     setEditObjectives(true);
   };
 
-  const handleMissionSave = () => {
-    axios
-      .put('http://localhost:8000/api/mission/', { title: missionText })
-      .then(response => {
-        setMission(response.data.title);
-        setEditMission(false);
-      })
-      .catch(error => {
-        console.error('Error updating mission data:', error);
-      });
-  };
+  //const handleMissionSave = () => {
+  //   axios
+  //     .put('http://localhost:8000/api/mission/', { title: missionText })
+  //     .then(response => {
+  //       setMission(response.data.title);
+  //       setEditMission(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error updating mission data:', error);
+  //     });
+  // };
 
   const handleVisionSave = () => {
     axios
@@ -109,17 +139,17 @@ const About = () => {
       });
   };
 
-  const handleMissionDelete = () => {
-    axios
-      .delete('http://localhost:8000/api/mission/')
-      .then(() => {
-        setMission('');
-        setEditMission(false);
-      })
-      .catch(error => {
-        console.error('Error deleting mission data:', error);
-      });
-  };
+  // const handleMissionDelete = () => {
+  //   axios
+  //     .delete('http://localhost:8000/api/mission/')
+  //     .then(() => {
+  //       setMission('');
+  //       setEditMission(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error deleting mission data:', error);
+  //     });
+  // };
 
   const handleVisionDelete = () => {
     axios

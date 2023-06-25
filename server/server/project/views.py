@@ -26,30 +26,72 @@ def create_mission(request):
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=400)
 
-def update_mission(request, mission_id):
-    mission = Mission.objects.filter(id=mission_id).first()
-    if request.method == 'POST' and mission:
+# def update_mission(request, mission_id):
+#     mission = Mission.objects.filter(id=mission_id).first()
+#     if request.method == 'POST' and mission:
+#         title = request.POST.get('title')
+#         description = request.POST.get('description')
+#         mission.title = title
+#         mission.description = description
+#         mission.save()
+#         data = {
+#             'id': mission.id,
+#             'title': mission.title,
+#             'description': mission.description
+#         }
+#         return JsonResponse(data)
+#     else:
+#         return JsonResponse({'error': 'Invalid request method or mission not found'}, status=400)
+
+# def delete_mission(request, mission_id):
+#     mission = Mission.objects.filter(id=mission_id).first()
+#     if request.method == 'POST' and mission:
+#         mission.delete()
+#         return JsonResponse({'message': 'Mission deleted successfully'})
+#     else:
+#         return JsonResponse({'error': 'Invalid request method or mission not found'}, status=400)
+
+
+
+# Update mission
+def update_mission(request):
+    if request.method == 'POST':
+        mission_id = request.POST.get('mission_id')
         title = request.POST.get('title')
         description = request.POST.get('description')
-        mission.title = title
-        mission.description = description
-        mission.save()
-        data = {
-            'id': mission.id,
-            'title': mission.title,
-            'description': mission.description
-        }
-        return JsonResponse(data)
+        mission = Mission.objects.filter(id=mission_id).first()
+        if mission:
+            mission.title = title
+            mission.description = description
+            mission.save()
+            data = {
+                'id': mission.id,
+                'title': mission.title,
+                'description': mission.description
+            }
+            return JsonResponse(data)
+        else:
+            return JsonResponse({'error': 'Mission not found'}, status=404)
     else:
-        return JsonResponse({'error': 'Invalid request method or mission not found'}, status=400)
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
 
-def delete_mission(request, mission_id):
-    mission = Mission.objects.filter(id=mission_id).first()
-    if request.method == 'POST' and mission:
-        mission.delete()
-        return JsonResponse({'message': 'Mission deleted successfully'})
+# Delete mission
+def delete_mission(request):
+    if request.method == 'POST':
+        mission_id = request.POST.get('mission_id')
+        mission = Mission.objects.filter(id=mission_id).first()
+        if mission:
+            mission.delete()
+            return JsonResponse({'message': 'Mission deleted successfully'})
+        else:
+            return JsonResponse({'error': 'Mission not found'}, status=404)
     else:
-        return JsonResponse({'error': 'Invalid request method or mission not found'}, status=400)
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
+
+
+
+
+
 
 
 def get_vision(request):

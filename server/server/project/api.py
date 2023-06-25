@@ -1,5 +1,7 @@
 from django.http import JsonResponse
-from .models import Mission, Vision, Objective 
+# from ..project.models import Mission, Vision, Objective 
+from .models import Mission, Vision, Objective
+
 
 def get_mission(request):
     mission = Mission.objects.first()
