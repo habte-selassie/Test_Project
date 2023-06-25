@@ -2,7 +2,7 @@ import  React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import image4 from '../web-components/assets/binance.png'
-import image5 from '../web-components/assets/drogba.jpeg'
+import image5 from '../web-components/assets/drogba1.jpeg'
 import image6 from '../web-components/assets/pepsi.jpg'
 
 
