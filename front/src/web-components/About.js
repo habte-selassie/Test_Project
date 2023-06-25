@@ -19,6 +19,8 @@ const About = () => {
   const [missionText, setMissionText] = useState(' Hello My Name Is Habte Selassie Fitsum');
   const [visionText, setVisionText] = useState('Hello My Name Is Habte Selassie Fitsum');
   const [objectiveText, setObjectiveText] = useState('Hello My Name Is Habte Selassie Fitsum');
+  const [initialMissionText, setInitialMissionText] = useState('Hello My Name Is Habte Selassie Fitsum');
+  const [modifiedMissionText, setModifiedMissionText] = useState('');
 
   useEffect(() => {
     // Fetch mission data
@@ -100,13 +102,17 @@ const About = () => {
   };
   
   const handleMissionEdit = () => {
+    setInitialMissionText(missionText)
+    setModifiedMissionText(missionText)
     setEditMission(true);
   };
   
 
 const handleMissionCancel = () =>{
   setEditMission(false);
-  setMissionText('')
+  setInitialMissionText(initialMissionText)
+  setModifiedMissionText(initialMissionText)
+  // setMissionText('')
 }
 
 const handleVisionSave = () => {
