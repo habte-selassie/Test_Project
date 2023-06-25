@@ -16,11 +16,15 @@ const About = () => {
   const [editMission, setEditMission] = useState(false);
   const [editVision, setEditVision] = useState(false);
   const [editObjective, setEditObjective] = useState(false);
-  const [missionText, setMissionText] = useState(' Hello My Name Is Habte Selassie Fitsum');
-  const [visionText, setVisionText] = useState('Hello My Name Is Habte Selassie Fitsum');
-  const [objectiveText, setObjectiveText] = useState('Hello My Name Is Habte Selassie Fitsum');
-  const [initialMissionText, setInitialMissionText] = useState('Hello My Name Is Habte Selassie Fitsum');
+  const [missionText, setMissionText] = useState('');
+  const [visionText, setVisionText] = useState('');
+  const [objectiveText, setObjectiveText] = useState('');
+  const [initialMissionText, setInitialMissionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
   const [modifiedMissionText, setModifiedMissionText] = useState('');
+  const [initialVisionText, setInitialVisionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [modifiedVisionText, setModifiedVisionText] = useState('');
+  const [initialObjectiveText, setInitialObjectiveText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [modifiedObjectiveText, setModifiedObjectiveText] = useState('');
 
   useEffect(() => {
     // Fetch mission data
@@ -110,9 +114,7 @@ const About = () => {
 
 const handleMissionCancel = () =>{
   setEditMission(false);
-  setInitialMissionText(initialMissionText)
-  setModifiedMissionText(initialMissionText)
-  // setMissionText('')
+  setMissionText(initialMissionText)
 }
 
 const handleVisionSave = () => {
@@ -151,11 +153,14 @@ const handleVisionDelete = () => {
 
 const handleVisionEdit = () => {
   setEditVision(true);
+  setInitialVisionText(visionText)
+  setModifiedVisionText(visionText)
+ 
 };
 
 const handleVisionCancel = () => {
   setEditVision(false);
-  setVisionText('');
+  setVisionText(initialVisionText);
 };
 
 const handleObjectiveSave = () => {
@@ -194,11 +199,13 @@ const handleObjectiveDelete = () => {
 
 const handleObjectiveEdit = () => {
   setEditObjective(true);
+  setInitialMissionText(objectiveText)
+  setModifiedMissionText(objectiveText)
 };
 
 const handleObjectiveCancel = () => {
   setEditObjective(false);
-  setObjectiveText('');
+  setObjectiveText(initialObjectiveText);
 };
 
   return (
