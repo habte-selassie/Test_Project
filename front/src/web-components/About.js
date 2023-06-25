@@ -16,14 +16,14 @@ const About = () => {
   const [editMission, setEditMission] = useState(false);
   const [editVision, setEditVision] = useState(false);
   const [editObjective, setEditObjective] = useState(false);
-  const [missionText, setMissionText] = useState('');
-  const [visionText, setVisionText] = useState('');
-  const [objectiveText, setObjectiveText] = useState('');
-  const [initialMissionText, setInitialMissionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [missionText, setMissionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [visionText, setVisionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [objectiveText, setObjectiveText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [initialMissionText, setInitialMissionText] = useState('');
   const [modifiedMissionText, setModifiedMissionText] = useState('');
-  const [initialVisionText, setInitialVisionText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [initialVisionText, setInitialVisionText] = useState('');
   const [modifiedVisionText, setModifiedVisionText] = useState('');
-  const [initialObjectiveText, setInitialObjectiveText] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur');
+  const [initialObjectiveText, setInitialObjectiveText] = useState('');
   const [modifiedObjectiveText, setModifiedObjectiveText] = useState('');
 
   useEffect(() => {
@@ -199,8 +199,8 @@ const handleObjectiveDelete = () => {
 
 const handleObjectiveEdit = () => {
   setEditObjective(true);
-  setInitialMissionText(objectiveText)
-  setModifiedMissionText(objectiveText)
+  setInitialObjectiveText(objectiveText)
+  setModifiedObjectiveText(objectiveText)
 };
 
 const handleObjectiveCancel = () => {
